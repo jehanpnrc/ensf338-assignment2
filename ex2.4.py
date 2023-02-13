@@ -1,7 +1,7 @@
 def func1(arr, low, high):
     if low < high:
         pi = (low + high) // 2
-        arr[pi], arr[high] = arr[high], arr[pi]
+        arr[pi], arr[low] = arr[low], arr[pi]
         pi = func2(arr, low, high)
         func1(arr, low, pi-1)
         func1(arr, pi + 1, high)
